@@ -183,7 +183,7 @@
     @apply [&>blockquote]:border-l-4 [&>blockquote]:border-gray-300 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-700 [&>blockquote]:my-6;
     @apply [&>strong]:font-semibold;
     @apply [&>code]:text-sm [&>code]:font-mono [&>code]:bg-gray-100 [&>code]:px-1.5 [&>code]:py-0.5 [&>code]:rounded;
-    @apply [&>pre]:bg-gray-900 [&>pre]:text-gray-50 [&>pre]:p-4 [&>pre]:rounded-lg [&>pre]:my-6 [&>pre>code]:bg-transparent [&>pre>code]:p-0;
+    @apply [&>pre]:bg-gray-900 [&>pre]:text-gray-50 [&>pre]:p-4 [&>pre]:rounded-lg [&>pre]:my-6 [&>pre]:overflow-x-auto [&>pre]:max-w-full [&>pre>code]:bg-transparent [&>pre>code]:p-0 [&>pre>code]:whitespace-pre;
     @apply [&>img]:rounded-lg [&>img]:shadow-md [&>img]:my-8;
     @apply [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-6 [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-6 [&>ul>li]:mb-2 [&>ul>li]:marker:text-gray-500 [&>ul>li]:text-sm [&>ol>li]:mb-2 [&>ol>li]:marker:text-gray-500 [&>ol>li]:text-sm;
     @apply [&>hr]:my-8 [&>hr]:border-gray-200;
@@ -259,5 +259,20 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
+    overflow-x: hidden; /* Prevent horizontal scroll on body */
+  }
+
+  /* Ensure code blocks don't break layout */
+  pre {
+    max-width: 100%;
+    overflow-x: auto;
+    word-wrap: normal;
+    white-space: pre;
+  }
+
+  /* Ensure inline code doesn't break layout */
+  code:not(pre code) {
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
