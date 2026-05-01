@@ -33,9 +33,9 @@ const {
   title = siteConfig.site.name,
   description = siteConfig.company.description,
   keywords = siteConfig.company.specialties.join(", "),
-  author = siteConfig.company.name,
+  author = siteConfig.company.fullName,
   image = getAbsoluteUrl(
-    siteConfig.company.logo,
+    "/og-cover.png",
     Astro.site?.href || siteConfig.site.url
   ),
   url = Astro.url.href,
@@ -59,6 +59,12 @@ const {
   schema,
 } = Astro.props;
 
+// Universal sharing image override
+const finalImage = getAbsoluteUrl(
+  "/og-cover.png",
+  Astro.site?.href || siteConfig.site.url
+);
+
 // Build robots meta tag
 const robotsContent =
   robots ||
@@ -80,7 +86,7 @@ const ogTags = [
   { property: "og:description", content: description },
   { property: "og:type", content: type },
   { property: "og:url", content: url },
-  { property: "og:image", content: image },
+  { property: "og:image", content: finalImage },
   { property: "og:locale", content: ogLocale },
   { property: "og:site_name", content: ogSiteName },
   ...(publishedTime
@@ -98,7 +104,7 @@ const twitterTags = [
   { name: "twitter:card", content: twitterCard },
   { name: "twitter:title", content: title },
   { name: "twitter:description", content: description },
-  { name: "twitter:image", content: image },
+  { name: "twitter:image", content: finalImage },
   { name: "twitter:creator", content: twitterCreator },
   { name: "twitter:site", content: twitterSite },
 ];
@@ -106,29 +112,52 @@ const twitterTags = [
 // Default Structured Data
 const defaultSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: siteConfig.company.name,
-  description: siteConfig.company.detailedDescription,
-  url: siteConfig.site.url,
-  image: siteConfig.company.logo,
-  jobTitle: siteConfig.company.description,
-  worksFor: {
-    "@type": "Organization",
-    name: "Joyboy Studio",
-    url: "https://joyboy.ae",
-  },
-  sameAs: [
-    siteConfig.contact.linkedin,
-    siteConfig.contact.github,
-    siteConfig.contact.twitter,
-    siteConfig.contact.website,
-  ].filter(Boolean),
-  knowsAbout: siteConfig.company.specialties,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Dubai",
-    addressRegion: "UAE",
-  },
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@id": "#muhammed-iqbal",
+    "@type": "Person",
+    "name": "Muhammed Iqbal",
+    "jobTitle": siteConfig.company.description,
+    "interactionStatistic": [{
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/FollowAction",
+      "userInteractionCount": 1
+    },{
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/LikeAction",
+      "userInteractionCount": 5
+    }],
+    "agentInteractionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/WriteAction",
+      "userInteractionCount": 2346
+    },
+    "image": "https://ikkuonline.vercel.app/profile/profile.jpg",
+    "knowsAbout": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Flutter",
+        "Supabase",
+        "SQL",
+        "MongoDB",
+        "RESTful",
+        "Agile",
+        "Scrum",
+        ...siteConfig.company.specialties
+    ],
+    "workLocation": {
+      "@type": "City",
+      "name": "Dubai"
+    },
+    "url": siteConfig.site.url,
+    "sameAs": [
+        siteConfig.contact.linkedin,
+        siteConfig.contact.github,
+        siteConfig.contact.twitter,
+        "https://www.instagram.com/i_ikku/"
+    ].filter(Boolean)
+  }
 };
 ---
 
@@ -160,6 +189,8 @@ const defaultSchema = {
 <meta name="format-detection" content="telephone=no" />
 
 <!-- Favicon and App Icons -->
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
