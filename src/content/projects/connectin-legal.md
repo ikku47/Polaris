@@ -5,7 +5,7 @@ date: 2024-08-20
 cover: "./images/cl1.webp"
 coverAlt: "Connectin Legal landing page"
 logo:
-  image: "./images/cl1.webp"
+  image: "https://www.google.com/s2/favicons?domain=connectinlegal.com&sz=64"
   fallback:
     text: "C"
     bgColor: "bg-emerald-600"

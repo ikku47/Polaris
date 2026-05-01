@@ -5,7 +5,7 @@ date: 2024-11-15
 cover: "./images/ba1.webp"
 coverAlt: "Baitek construction platform"
 logo:
-  image: "./images/ba2.webp"
+  image: "https://www.google.com/s2/favicons?domain=baitek.ae&sz=64"
   fallback:
     text: "B"
     bgColor: "bg-blue-600"

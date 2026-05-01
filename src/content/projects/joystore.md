@@ -5,7 +5,7 @@ date: 2024-07-05
 cover: "./images/js1.webp"
 coverAlt: "JoyStore mobile app interface"
 logo:
-  image: "./images/js2.webp"
+  image: "https://www.google.com/s2/favicons?domain=appifywoo.com&sz=64"
   fallback:
     text: "J"
     bgColor: "bg-purple-600"

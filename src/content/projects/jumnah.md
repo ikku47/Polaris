@@ -5,7 +5,7 @@ date: 2024-12-01
 cover: "./images/jm1.webp"
 coverAlt: "Jumnah e-commerce platform"
 logo:
-  image: "./images/jm2.webp"
+  image: "https://www.google.com/s2/favicons?domain=jumnah.com&sz=64"
   fallback:
     text: "J"
     bgColor: "bg-orange-500"
