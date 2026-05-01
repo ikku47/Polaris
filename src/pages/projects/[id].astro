@@ -135,6 +135,23 @@ const githubLink = extractGitHubLink(contentText);
   section="Projects"
   tags={project.tags || []}
   twitterCard="summary_large_image"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.name,
+    description: project.description,
+    image: getAbsoluteUrl(
+      project.cover.src,
+      Astro.site?.href || siteConfig.site.url
+    ),
+    url: Astro.url.href,
+    author: {
+      "@type": "Person",
+      name: siteConfig.company.name,
+    },
+    datePublished: project.date,
+    keywords: project.tags?.join(", "),
+  }}
 >
   <Fragment slot="left-content">
     <div

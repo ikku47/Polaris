@@ -26,15 +26,16 @@ export interface Props {
   colorScheme?: "light" | "dark" | "light dark";
   viewport?: string;
   robots?: string;
+  schema?: any;
 }
 
 const {
-  title = siteConfig.company.name,
+  title = siteConfig.site.name,
   description = siteConfig.company.description,
   keywords = siteConfig.company.specialties.join(", "),
   author = siteConfig.company.name,
   image = getAbsoluteUrl(
-    "/og-image.png",
+    siteConfig.company.logo,
     Astro.site?.href || siteConfig.site.url
   ),
   url = Astro.url.href,
@@ -44,17 +45,18 @@ const {
   section,
   tags = [],
   twitterCard = "summary_large_image",
-  twitterCreator = "@educlopez",
-  twitterSite = "@educlopez",
+  twitterCreator = "@ikku47",
+  twitterSite = "@ikku47",
   noindex = false,
   nofollow = false,
   canonical,
   ogLocale = "en_US",
-  ogSiteName = siteConfig.company.name,
+  ogSiteName = siteConfig.site.name,
   themeColor = "#ffffff",
   colorScheme = "light dark",
   viewport = "width=device-width, initial-scale=1",
   robots,
+  schema,
 } = Astro.props;
 
 // Build robots meta tag
@@ -100,6 +102,34 @@ const twitterTags = [
   { name: "twitter:creator", content: twitterCreator },
   { name: "twitter:site", content: twitterSite },
 ];
+
+// Default Structured Data
+const defaultSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteConfig.company.name,
+  description: siteConfig.company.detailedDescription,
+  url: siteConfig.site.url,
+  image: siteConfig.company.logo,
+  jobTitle: siteConfig.company.description,
+  worksFor: {
+    "@type": "Organization",
+    name: "Joyboy Studio",
+    url: "https://joyboy.ae",
+  },
+  sameAs: [
+    siteConfig.contact.linkedin,
+    siteConfig.contact.github,
+    siteConfig.contact.twitter,
+    siteConfig.contact.website,
+  ].filter(Boolean),
+  knowsAbout: siteConfig.company.specialties,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Dubai",
+    addressRegion: "UAE",
+  },
+};
 ---
 
 <!-- Basic Meta Tags -->
@@ -169,29 +199,5 @@ const twitterTags = [
 <!-- Structured Data for SEO -->
 <script
   type="application/ld+json"
-  set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: siteConfig.company.name,
-    description: siteConfig.company.description,
-    url: Astro.site?.href || siteConfig.site.url,
-    image: getAbsoluteUrl(
-      "/og-image.png",
-      Astro.site?.href || siteConfig.site.url
-    ),
-    sameAs: [
-      siteConfig.contact.linkedin,
-      siteConfig.contact.github,
-      siteConfig.contact.twitter,
-      siteConfig.contact.dribbble,
-      siteConfig.contact.figma,
-    ].filter(Boolean),
-    jobTitle: "UI Designer & Frontend Developer",
-    worksFor: {
-      "@type": "Organization",
-      name: "Freelance",
-    },
-    knowsAbout: siteConfig.company.specialties,
-    knowsLanguage: ["English", "Spanish"],
-  })}
+  set:html={JSON.stringify(schema || defaultSchema)}
 />

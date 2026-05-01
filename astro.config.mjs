@@ -3,9 +3,11 @@ import mdx from "@astrojs/mdx";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 
+import sitemap from "@astrojs/sitemap";
+
 export default defineConfig({
-  site: "https://polaris-six-rust.vercel.app",
-  integrations: [mdx(), react()],
+  site: "https://www.ikku.xyz",
+  integrations: [mdx(), react(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },

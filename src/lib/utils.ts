@@ -127,7 +127,7 @@ export function getAbsoluteUrl(path: string, baseUrl?: string): string {
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
 
   // Use provided base URL or default to site config
-  const base = baseUrl || "https://polaris-six-rust.vercel.app";
+  const base = baseUrl || "https://www.ikku.xyz";
 
   // Ensure base URL doesn't end with slash
   const cleanBase = base.endsWith("/") ? base.slice(0, -1) : base;
@@ -139,5 +139,5 @@ export function getAbsoluteUrl(path: string, baseUrl?: string): string {
  * Get the site URL from config or fallback to default
  */
 export function getSiteUrl(): string {
-  return "https://polaris-six-rust.vercel.app";
+  return "https://www.ikku.xyz";
 }
