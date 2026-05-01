@@ -1,89 +1,111 @@
 {
   "site": {
-    "url": "https://polaris-six-rust.vercel.app",
-    "name": "Polaris Portfolio"
+    "url": "https://joyboy.ae",
+    "name": "ikku47 | Portfolio"
   },
   "company": {
-    "name": "Eduardo Calvo",
-    "logo": "https://github.com/educlopez.png",
-    "description": "UI Designer & Frontend Developer",
-    "longDescription": "Passionate UI designer and frontend developer with 8+ years of experience crafting digital experiences that blend aesthetics with functionality.",
-    "detailedDescription": "I transform complex ideas into elegant, user-centered digital solutions. My approach combines strategic design thinking with technical expertise, ensuring every project delivers both visual impact and seamless functionality. From concept to deployment, I work closely with clients to understand their goals and create solutions that exceed expectations.",
-    "footerText": "Based in Madrid, Spain. Collaborating with innovative companies worldwide to build exceptional digital experiences.",
-    "copyright": "© 2025 Eduardo Calvo. All rights reserved.",
+    "name": "ikku47",
+    "logo": "https://github.com/ikku47.png",
+    "description": "Full Stack Web Developer",
+    "longDescription": "I'm a Full Stack Web Developer with nearly 7 years of experience, specialising in building minimal, magical, and meaningful digital experiences. Based in Dubai, UAE, I currently co-found and lead the technical direction at Joyboy.ae.",
+    "detailedDescription": "I'm a Full Stack Web Developer with nearly 7 years of experience, specialising in building minimal, magical, and meaningful digital experiences. Based in Dubai, UAE, I currently co-found and lead the technical direction at Joyboy.ae — a full-service digital agency focused on web/app development, UI/UX, Web3, and AI-powered products.\n\nI'm a frontend visionary at heart — obsessed with Apple-style design sensibility, silky performance, and pixel-perfect craft. When I'm not shipping code, I'm tinkering with AI, exploring spatial computing, or deep in a cinema binge.",
+    "interests": ["Travel", "Cinema", "AI", "Curiosity", "Series binge"],
+    "footerText": "Based in Dubai, UAE. Co-founding and leading technical direction at Joyboy.ae.",
+    "copyright": "© 2026 ikku47. All rights reserved.",
     "status": {
       "available": true,
-      "text": "Available for new projects"
+      "text": "Available for immediate hiring"
     },
     "specialties": [
-      "UI/UX Design",
-      "Frontend Development",
-      "Responsive Design",
-      "Design Systems",
-      "Web Applications",
-      "User Experience"
+      "Full Stack Development",
+      "API Integration",
+      "Blockchain Web Apps",
+      "E-commerce",
+      "Mobile Development",
+      "Performance Optimization"
     ],
     "technologies": [
       "React",
-      "Vue.js",
+      "Next.js",
+      "Node.js",
       "TypeScript",
-      "Tailwind CSS",
-      "Figma",
-      "Adobe Creative Suite"
+      "ElectronJS",
+      "Flutter"
     ]
   },
   "contact": {
     "bookCall": {
       "text": "Book a call",
-      "url": "/"
+      "url": "mailto:info@joyboy.ae"
     },
     "chat": {
       "text": "Chat",
-      "url": "/"
+      "url": "https://wa.me/971506189848"
     },
-    "email": "hello@eduardocalvolopez.com",
-    "linkedin": "https://linkedin.com/in/educlopez",
-    "github": "https://github.com/educlopez",
-    "dribbble": "https://dribbble.com/educlopez",
-    "twitter": "https://twitter.com/educlopez",
-    "instagram": "https://instagram.com/educlopez",
+    "email": "info@joyboy.ae",
+    "linkedin": "https://linkedin.com/in/ikku47",
+    "github": "https://github.com/ikku47",
+    "dribbble": "",
+    "twitter": "https://twitter.com/ikku47",
+    "instagram": "",
     "youtube": "",
     "behance": "",
-    "figma": "https://figma.com/@educlopez",
-    "medium": ""
+    "figma": "",
+    "medium": "",
+    "website": "https://joyboy.ae"
   },
   "experience": [
     {
-      "year": "2022 — Present",
-      "company": "Vercel",
-      "type": "Senior UI Designer & Frontend Developer",
-      "logo": "https://cdn.simpleicons.org/vercel",
-      "description": "Leading design and development initiatives for digital products, creating scalable design systems and implementing modern frontend architectures."
+      "year": "Dec 2023 — Present",
+      "company": "Power Land Technologies",
+      "type": "Senior Frontend Developer",
+      "logo": "https://cdn.simpleicons.org/electronjs",
+      "description": "Developed and deployed APIs to integrate lottery systems, Cocos games, and ElectronJS-based chat applications. Optimized Core Web Vitals and Lighthouse scores for React/Next.js frontends on Vercel. Implemented reusable component architectures using TypeScript and Zustand, reducing dev time by 40%.",
+      "technologies": ["React", "Next.js", "ElectronJS", "TypeScript", "Tailwind CSS", "Zustand"]
     },
     {
-      "year": "2020 — 2022",
-      "company": "Cloudflare",
-      "type": "UI/UX Designer & Web Developer",
-      "logo": "https://cdn.simpleicons.org/cloudflare",
-      "description": "Designed and developed user-centered digital solutions, focusing on brand identity and user experience optimization."
+      "year": "Dec 2022 — Dec 2023",
+      "company": "Super Future Information Technology LLC",
+      "type": "Frontend Development Manager",
+      "logo": "https://cdn.simpleicons.org/flutter",
+      "description": "Led 15+ person teams in Flutter and JavaScript projects, delivering high-value blockchain web apps with million-dollar USDT turnover. Engineered reusable UI components that slashed development time by 50%.",
+      "technologies": ["React", "Flutter", "Blockchain", "Leadership", "Team Management"]
     },
     {
-      "year": "2018 — 2020",
-      "company": "Stripe",
-      "type": "Graphic Designer & Web Developer",
-      "logo": "https://cdn.simpleicons.org/stripe",
-      "description": "Created visual identities and web solutions for diverse clients, building expertise in both design and development workflows."
+      "year": "Sep 2022 — Dec 2022",
+      "company": "Ambab Infotech",
+      "type": "Senior Software Developer",
+      "logo": "https://cdn.simpleicons.org/react",
+      "description": "Contributed to Caratlane's e-commerce project using microservices architecture. Developed, tested, and documented REST and GraphQL APIs. Managed CRON jobs for generating e-commerce reports.",
+      "technologies": ["React", "Node.js", "Microservices", "GraphQL", "E-commerce"]
     },
     {
-      "year": "2016 — 2018",
-      "company": "GitHub",
-      "type": "Graphic Designer & Web Developer",
-      "logo": "https://cdn.simpleicons.org/github",
-      "description": "Developed corporate communications and digital assets, gaining experience in enterprise-level design requirements."
+      "year": "Jan 2019 — Sep 2022",
+      "company": "Acodez IT Solutions Pvt. Ltd.",
+      "type": "Development Team Lead",
+      "logo": "https://cdn.simpleicons.org/nodedotjs",
+      "description": "Managed full lifecycle of web applications including live tracking, ML OCR, and auction platforms. Proficient in MongoDB/MySQL with Mongoose/Sequelize. Translated client needs into robust application designs.",
+      "technologies": ["Node.js", "MongoDB", "MySQL", "Machine Learning", "Leadership"]
+    },
+    {
+      "year": "Dec 2017 — May 2018",
+      "company": "Aceinfolabs",
+      "type": "NodeJs Developer",
+      "logo": "https://cdn.simpleicons.org/nodedotjs",
+      "description": "Contributed to projects involving XML financial document management. Demonstrated strong organizational skills, prioritizing tasks for timely project completion in collaborative environments.",
+      "technologies": ["Node.js", "XML", "Financial Systems"]
+    },
+    {
+      "year": "Apr 2017 — Oct 2017",
+      "company": "BigLeap Solutions",
+      "type": "Android Developer",
+      "logo": "https://cdn.simpleicons.org/android",
+      "description": "Native Android development using Java, focusing on building high-performance mobile applications and implementing complex UI designs.",
+      "technologies": ["Android", "Java", "Mobile Development"]
     }
   ],
   "projects": {
-    "gridColumns": 1
+    "gridColumns": 3
   },
   "testimonials": [
     {

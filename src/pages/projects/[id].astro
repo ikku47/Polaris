@@ -137,7 +137,10 @@ const githubLink = extractGitHubLink(contentText);
   twitterCard="summary_large_image"
 >
   <Fragment slot="left-content">
-    <div class="project-sidebar lg:sticky lg:top-4 space-y-8">
+    <div
+      class="project-sidebar lg:sticky lg:top-4 space-y-8"
+      transition:animate="slide"
+    >
       <!-- Back Navigation -->
       <div class="flex items-center gap-2">
         <a
@@ -245,13 +248,13 @@ const githubLink = extractGitHubLink(contentText);
       alt={project.coverAlt}
       width="1200"
       height="675"
-      class="w-full aspect-video object-cover rounded-xl mb-12"
+      class="w-full aspect-video object-cover rounded-xl mb-12 shadow-2xl"
       transition:name={`project-${entry.id}`}
       loading="eager"
       decoding="sync"
       fetchpriority="high"
     />
-    <div class="grid gap-12 min-w-0">
+    <div class="grid gap-12 min-w-0" transition:animate="fade">
       <article class="prose-custom min-w-0">
         <Content />
       </article>
