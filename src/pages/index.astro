@@ -66,14 +66,14 @@ import { Button } from "@/components/ui/button";
           )
         }
       </div>
-      <div class="flex items-center gap-3">
-        <a href={contact.bookCall.url}>
-          <Button>
+      <div class="flex flex-col sm:flex-row items-center gap-3">
+        <a href={contact.bookCall.url} class="w-full sm:w-auto">
+          <Button className="w-full">
             {contact.bookCall.text}
           </Button>
         </a>
-        <a href={contact.chat.url} target="_blank">
-          <Button variant="outline">
+        <a href={contact.chat.url} target="_blank" class="w-full sm:w-auto">
+          <Button variant="outline" className="w-full">
             {contact.chat.text}
           </Button>
         </a>
@@ -87,7 +87,7 @@ import { Button } from "@/components/ui/button";
                 <span class="text-xs text-gray-400">{exp.year}</span>
               </div>
               <div class="overflow-hidden transition-all duration-300 ease-in-out">
-                <div class="max-h-32 lg:max-h-0 lg:group-hover:max-h-32 transition-all duration-300 ease-in-out">
+                <div class="max-h-[1000px] lg:max-h-0 lg:group-hover:max-h-32 transition-all duration-300 ease-in-out">
                   <p class="text-xs text-gray-500 pt-2 leading-relaxed">
                     {exp.description}
                   </p>
