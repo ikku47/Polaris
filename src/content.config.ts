@@ -10,7 +10,7 @@ const projects = defineCollection({
       cover: image(),
       coverAlt: z.string(),
       logo: z.object({
-        image: image(),
+        image: z.union([image(), z.string().url()]),
         fallback: z.object({
           text: z.string().length(1),
           bgColor: z.string(),

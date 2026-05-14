@@ -2,7 +2,7 @@
 name: "DevTools – Free Developer & Productivity Utilities"
 description: "Free developer and productivity utilities for research, formatting, diagnostics, and daily workflows."
 date: 2026-05-14
-cover: "./images/dev-tools-two-jet.vercel.app.webp"
+cover: "./images/dev-tools-two-jet.webp"
 coverAlt: "DevTools platform preview"
 logo:
   image: "https://www.google.com/s2/favicons?domain=dev-tools-two-jet.vercel.app&sz=64"
