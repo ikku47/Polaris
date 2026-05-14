@@ -60,10 +60,7 @@ const {
 } = Astro.props;
 
 // Universal sharing image override
-const finalImage = getAbsoluteUrl(
-  "/og-cover.png",
-  Astro.site?.href || siteConfig.site.url
-);
+const finalImage = image;
 
 // Build robots meta tag
 const robotsContent =
